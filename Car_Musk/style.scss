@@ -1,0 +1,645 @@
+@font-face {
+  font-family: "Reforma Grotesk Bold";
+  src: url("../fonts/ReformaGroteskBoldC.woff");
+}
+
+@font-face {
+  font-family: "Reforma Grotesk Demi";
+  src: url("../fonts/ReformaGroteskDemiC.woff");
+}
+
+@font-face {
+  font-family: "Reforma Grotesk Light";
+  src: url("../fonts/ReformaGroteskLightC.woff");
+}
+
+@font-face {
+  font-family: "Reforma Grotesk Medium";
+  src: url("../fonts/ReformaGroteskMediumC.woff");
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+.wrapper {
+  background-image: url(../assets/img/Rectangle.png);
+  padding-top: 40px;
+  color: #fff;
+  width: 1920px;
+  margin: 0 auto;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  margin: 0 auto;
+  width: 1296px;
+
+  &__nav {
+    &-list {
+      font-family: "Reforma Grotesk Medium";
+      display: flex;
+      gap: 40px;
+      font-size: 24px;
+      list-style: none;
+    }
+
+    &-item {
+      font-family: "Reforma Grotesk Medium";
+      display: flex;
+      gap: 40px;
+      font-size: 24px;
+      list-style: none;
+      cursor: pointer;
+      -webkit-transition: all 1s ease;
+      transition: all 1s ease; /* Время изменения цвета */
+    }
+    &-item:hover {
+      color: #ffa000;
+    }
+  }
+}
+.content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  &__title {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    h1 {
+      font-family: "Reforma Grotesk Bold";
+      margin-top: 168px;
+      color: #db3138;
+      font-size: 150px;
+    }
+
+    &-description {
+      font-family: "Reforma Grotesk Medium";
+      margin: 40px 0;
+      text-align: center;
+      width: 437px;
+      font-size: 40px;
+    }
+
+    &-button {
+      position: relative;
+      width: 144px;
+      height: 61px;
+      font-family: "Reforma Grotesk Demi";
+      font-size: 24px;
+      text-align: end;
+      text-transform: uppercase;
+      background: none;
+      border: none;
+      color: #ffffff;
+      z-index: 1;
+      padding-right: 3px;
+
+      &::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: -1;
+        width: 110px;
+        height: 61px;
+        background-color: #db3138;
+      }
+    }
+  }
+
+  &__contacts {
+    display: flex;
+    margin-top: 103px;
+
+    &-item {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      width: 640px;
+      height: 213px;
+      border: 1px solid #fff;
+      border-left: none;
+
+      h3 {
+        margin-bottom: 20px;
+        font-family: "Reforma Grotesk Demi";
+        font-size: 18px;
+        text-transform: uppercase;
+      }
+
+      h2 {
+        font-family: "Reforma Grotesk Demi";
+        line-height: 140%;
+        text-align: center;
+        width: 265px;
+        color: #db3138;
+        text-transform: uppercase;
+        font-size: 24px;
+      }
+
+      &:last-child {
+        border-right: none;
+      }
+    }
+  }
+}
+.container {
+  display: flex;
+  flex-direction: column;
+  background-color: black;
+  width: 1920px;
+  height: auto;
+
+  &__achievements {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    gap: 40px 60px;
+    margin: 0 auto;
+    width: 1296px;
+    height: 745px;
+    margin-top: 180px;
+
+    &-text {
+      width: 636px;
+      height: 146px;
+      p {
+        color: rgb(255, 255, 255);
+        font-family: ReformaGroteskDemiC;
+        font-size: 52px;
+        font-weight: 600;
+        line-height: 140%;
+        letter-spacing: 5%;
+        text-align: left;
+        text-transform: uppercase;
+      }
+    }
+  }
+  &__achievements-icon {
+    margin-top: 40px;
+  }
+  &__subtext {
+    width: 526px;
+    height: 116px;
+    margin-top: 40px;
+    p {
+      color: rgb(255, 255, 255);
+      font-family: ReformaGroteskMediumC;
+      font-size: 24px;
+      font-weight: 500;
+      line-height: 120%;
+      letter-spacing: 3%;
+      text-align: left;
+    }
+  }
+  &__block1 {
+    position: absolute;
+    width: 318px;
+    height: 680px;
+    right: 0;
+    top: 37px;
+  }
+  &__block {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 318px;
+    height: 177px;
+    box-sizing: border-box;
+    border: 1px solid rgb(137, 137, 137);
+
+    &__sub-block {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 10px;
+      flex-direction: column;
+      position: absolute;
+      width: 277px;
+      height: 117px;
+      // background-color: red;
+      p {
+        color: rgb(219, 49, 56);
+        font-family: ReformaGroteskDemiC;
+        font-weight: 600;
+        // text-align: center;
+        span {
+          font-size: 53px;
+        }
+      }
+      .under-the-img {
+        margin-bottom: 10px;
+      }
+    }
+    .under-the-block {
+      width: 279px;
+      height: 44px;
+      p {
+        color: rgb(255, 255, 255);
+        font-family: ReformaGroteskDemiC;
+        font-size: 16px;
+        font-weight: 600;
+        line-height: 140%;
+        letter-spacing: 5%;
+        text-align: center;
+        text-transform: uppercase;
+      }
+    }
+  }
+
+  &__block2 {
+    position: absolute;
+    width: 318px;
+    height: 680px;
+    right: 318px;
+  }
+
+  .container__block-scrol {
+    margin: 0 auto;
+    margin-top: 180px;
+    width: 1557px;
+    height: 420px;
+  }
+  &__block-inner {
+    display: flex;
+    justify-content: center;
+    justify-content: space-between;
+    align-items: center;
+    gap: 10px;
+    flex-direction: row; /* Размещение элементов в строку */
+    width: 100%;
+    overflow-x: auto; /* Горизонтальная прокрутка */
+    white-space: nowrap; /* Запрещаем перенос строк */
+  }
+  .photo,
+  .photo1,
+  .photo2 {
+    background-image: url(../assets/img/Group24.png);
+    display: inline-block; /* Обязательно, чтобы элементы не переносились */
+    width: 416px;
+    height: 420px;
+    background-size: cover;
+    background-position: center;
+    margin-right: 10px;
+  }
+  .photo1 {
+    background-image: url(../assets/img/Group23.png);
+  }
+  .photo2 {
+    background-image: url(../assets/img/Group22.png);
+  }
+  .advantages {
+    display: flex;
+    justify-content: space-between;
+    width: 1296px;
+    height: 662px;
+    margin: 0 auto;
+    margin-top: 180px;
+    &__frame1 {
+      width: 526px;
+      height: 662px;
+      .description-of-materials {
+        margin-top: 30px;
+        width: 526px;
+        height: 58px;
+        p {
+          color: rgb(255, 255, 255);
+          font-family: ReformaGroteskMediumC;
+          font-size: 24px;
+          font-weight: 500;
+          line-height: 120%;
+          letter-spacing: 3%;
+        }
+      }
+    }
+    &__frame-materials {
+      display: flex;
+      gap: 36px;
+      width: 526px;
+      height: 75px;
+      .materials {
+        margin-top: 14px;
+        width: 426px;
+        height: 43px;
+        h2 {
+          color: rgb(255, 255, 255);
+          font-family: ReformaGroteskDemiC;
+          font-size: 32px;
+          font-weight: 600;
+          line-height: 140%;
+          letter-spacing: 5%;
+          text-align: left;
+          text-transform: uppercase;
+        }
+      }
+      &__icon {
+        display: flex;
+        justify-content: center;
+        width: 70px;
+        height: 70px;
+      }
+    }
+    &__frame2 {
+      position: relative;
+      width: 1296px;
+      height: 662.43px;
+      left: 160px;
+      right: 312px;
+      &__frame2-icon {
+        width: 636px;
+        height: 550px;
+      }
+    }
+  }
+  .icon-container {
+    display: flex;
+    justify-content: center;
+    .advantages-icon {
+      width: 146px;
+      height: 14px;
+      margin-top: 50px;
+      margin-bottom: 40px;
+    }
+  }
+  &__services {
+    // background-color: #db3138;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 1296px;
+    height: 771px;
+    margin: 0 auto;
+    margin-top: 180px;
+    &__title-service {
+      text-align: center;
+      position: relative;
+      width: 100%;
+    }
+  }
+
+  &__title-service h2 {
+    color: rgb(255, 255, 255);
+    font-family: ReformaGroteskDemiC;
+    font-size: 52px;
+    font-weight: 600;
+    line-height: 140%;
+    text-align: center;
+    text-transform: uppercase;
+    margin: 0;
+  }
+
+  &__title-icon1 {
+    display: block;
+    margin: 45px auto 0;
+  }
+
+  &__pasting-detailing {
+    // background-color: red;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 450px;
+    height: 75px;
+    margin: 0 auto;
+    margin-top: 60px;
+    .block-1 {
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+      align-items: center;
+      width: 181px;
+      height: 75px;
+      h2 {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background: rgb(219, 49, 56);
+        color: rgb(255, 255, 255);
+        font-family: ReformaGroteskDemiC;
+        font-size: 32px;
+        font-weight: 600;
+        line-height: 140%;
+        letter-spacing: 5%;
+        text-align: left;
+        text-transform: uppercase;
+        width: 100%;
+        height: 100%;
+        box-sizing: border-box;
+      }
+    }
+    .block-2 {
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+      align-items: center;
+      width: 209px;
+      height: 75px;
+      h2 {
+        width: 129px;
+        height: 45px;
+        color: rgb(255, 255, 255);
+        font-family: ReformaGroteskDemiC;
+        font-size: 32px;
+        font-weight: 600;
+        line-height: 140%;
+        letter-spacing: 5%;
+        text-align: left;
+        text-transform: uppercase;
+      }
+    }
+  }
+  .blocks {
+    display: flex;
+    justify-content: space-between;
+    gap: 24px;
+    padding-top: 80px;
+    .block-3 {
+      text-align: center;
+      padding-top: 86px;
+      box-sizing: border-box;
+      border: 1px solid rgb(137, 137, 137);
+      width: 306px;
+      height: 428px;
+      h2 {
+        padding-top: 27px;
+      }
+      .lorem1 {
+        width: 226px;
+        padding-top: 27px;
+        margin: 0 auto;
+        p {
+          text-align: center;
+          color: rgb(255, 255, 255);
+          font-family: ReformaGroteskDemiC;
+          font-size: 16px;
+          font-weight: 600;
+          line-height: 140%;
+          text-transform: uppercase;
+        }
+      }
+    }
+    .block-4 {
+      text-align: center;
+      padding-top: 86px;
+      box-sizing: border-box;
+      border: 1px solid rgb(137, 137, 137);
+      width: 306px;
+      height: 428px;
+      h2 {
+        padding-top: 16px;
+      }
+      .lorem2 {
+        width: 226px;
+        padding-top: 27px;
+        margin: 0 auto;
+        p {
+          text-align: center;
+          color: rgb(255, 255, 255);
+          font-family: ReformaGroteskDemiC;
+          font-size: 16px;
+          font-weight: 600;
+          line-height: 140%;
+          text-transform: uppercase;
+        }
+      }
+    }
+    .block-5 {
+      text-align: center;
+      padding-top: 86px;
+      box-sizing: border-box;
+      border: 1px solid rgb(137, 137, 137);
+      width: 306px;
+      height: 428px;
+      h2 {
+        padding-top: 43px;
+      }
+      .lorem3 {
+        width: 226px;
+        padding-top: 27px;
+        margin: 0 auto;
+        p {
+          text-align: center;
+          color: rgb(255, 255, 255);
+          font-family: ReformaGroteskDemiC;
+          font-size: 16px;
+          font-weight: 600;
+          line-height: 140%;
+          text-transform: uppercase;
+        }
+      }
+    }
+    .block-6 {
+      text-align: center;
+      padding-top: 86px;
+      box-sizing: border-box;
+      border: 1px solid rgb(137, 137, 137);
+      width: 306px;
+      height: 428px;
+      h2 {
+        padding-top: 20px;
+      }
+      .lorem4 {
+        width: 226px;
+        padding-top: 27px;
+        margin: 0 auto;
+        p {
+          text-align: center;
+          color: rgb(255, 255, 255);
+          font-family: ReformaGroteskDemiC;
+          font-size: 16px;
+          font-weight: 600;
+          line-height: 140%;
+          text-transform: uppercase;
+        }
+      }
+    }
+  }
+  .block-one {
+    margin: 0 auto;
+    margin-top: 180px;
+  }
+  .block-image {
+    // background-color: red;
+    width: 1920px;
+    height: 1028px;
+    margin-top: 180px;
+    .our-works {
+      text-align: center;
+      width: 636px;
+      height: 73px;
+      margin: auto;
+      h2 {
+        color: rgb(255, 255, 255);
+        font-family: ReformaGroteskDemiC;
+        font-size: 52px;
+        font-weight: 600;
+        line-height: 140%;
+        letter-spacing: 5%;
+        text-align: center;
+        text-transform: uppercase;
+      }
+    }
+    .block-img-icon {
+      text-align: center;
+      margin: auto;
+      padding-top: 40px;
+      padding-bottom: 60px;
+    }
+  }
+  .more-images {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    width: 1920px;
+    height: 840px;
+    .block-img1 {
+      width: 320px;
+      height: 280px;
+    }
+  }
+  .footer {
+    // background-color: #db3138;
+    width: 1920px;
+    height: 653px;
+    margin-top: 111px;
+    .form {
+      background-color: black;
+      width: 636px;
+      height: 494px;
+      margin: auto;
+      .answer {
+        width: 636px;
+        height: 73px;
+        h2 {
+          color: rgb(255, 255, 255);
+          font-family: ReformaGroteskDemiC;
+          font-size: 52px;
+          font-weight: 600;
+          line-height: 140%;
+          letter-spacing: 5%;
+          text-align: center;
+          text-transform: uppercase;
+        }
+      }
+      .footer-icon {
+        text-align: center;
+        margin-top: 40px;
+      }
+      form {
+        padding-top: 60px;
+      }
+    }
+  }
+}
